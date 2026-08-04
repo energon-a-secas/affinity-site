@@ -1,0 +1,19 @@
+# Affinity is an internal, unlisted tool — keep it out of all indexes.
+User-agent: *
+Disallow: /
+
+# Named crawlers, explicitly disallowed too
+User-agent: Googlebot
+Disallow: /
+User-agent: Bingbot
+Disallow: /
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
