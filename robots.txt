@@ -1,4 +1,4 @@
-# Affinity is an internal, unlisted tool — keep it out of all indexes.
+# Affinity is published but unlisted: reachable by link, absent from indexes.
 User-agent: *
 Disallow: /
 
@@ -17,3 +17,16 @@ User-agent: ClaudeBot
 Disallow: /
 User-agent: anthropic-ai
 Disallow: /
+
+# Link-unfurl bots are allowed so a shared URL still renders its preview card.
+# These do not index; they fetch the one page they were handed.
+User-agent: Twitterbot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Slackbot-LinkExpanding
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: Discordbot
+Allow: /

@@ -1,10 +1,20 @@
 // ── Shared utilities ─────────────────────────────────────────
 // Small, pure helper functions used across multiple modules.
 
-/** Cached element lookup by ID. */
-const _els = {};
+/**
+ * Element lookup by ID, cached only while the node is still in the
+ * document. Modal bodies are replaced wholesale on re-render, so a
+ * permanent cache hands back detached nodes that silently swallow
+ * every later write.
+ */
+const _els = new Map();
 export function $(id) {
-  return _els[id] || (_els[id] = document.getElementById(id));
+  const hit = _els.get(id);
+  if (hit && hit.isConnected) return hit;
+  const el = document.getElementById(id);
+  if (el) _els.set(id, el);
+  else _els.delete(id);
+  return el;
 }
 
 /** Escape HTML special characters. */

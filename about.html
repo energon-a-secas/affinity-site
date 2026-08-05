@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affinity | What to expect from an engineer</title>
-  <meta name="description" content="A Hunter x Hunter Nen model for tech work: what to expect when someone works outside their corner, and why AI raises their output without raising their judgment">
-  <meta property="og:title" content="Affinity | What to expect from an engineer">
+  <title>Affinity | About</title>
+  <meta name="description" content="What this is, where the Nen affinity hexagon came from, how to read a percentage, and how not to use one">
+  <meta property="og:title" content="Affinity | About">
   <meta property="og:description" content="Two layers: the corner your judgment came from, and the corner your job is in. The gap tells you what to expect.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://affinity.neorgon.com/">
+  <meta property="og:url" content="https://affinity.neorgon.com/about.html">
   <meta property="og:site_name" content="Neorgon">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Affinity | What to expect from an engineer">
+  <meta name="twitter:title" content="Affinity | About">
   <meta name="twitter:description" content="Why AI raises output without raising judgment, and what that means for who you put on what">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://affinity.neorgon.com/">
+  <link rel="canonical" href="https://affinity.neorgon.com/about.html">
   <meta property="og:locale" content="en_US">
   <meta name="theme-color" content="#040714">
   <meta property="og:image" content="https://affinity.neorgon.com/og-preview.jpg">
@@ -42,7 +42,7 @@
       </a>
       <a href="./" class="header-title-link">
         <h1>Affinity</h1>
-        <div class="header-subtitle">What to expect from an engineer</div>
+        <div class="header-subtitle">About</div>
       </a>
     </div>
     <div class="header-right">
@@ -56,40 +56,26 @@
   </header>
 
   <main id="main">
-    <div class="container--console">
+    <div class="container stack stack--loose">
 
-      <section class="console-head" aria-labelledby="hex-title">
-        <div class="console-head__titles">
-          <h2 class="console-head__title" id="hex-title">The affinity hexagon</h2>
-          <p class="console-head__lead">
-            Click a corner to set your <strong>affinity</strong>, the corner your judgment came from.
-            Shift-click another to set the <strong>work</strong> you are doing now. The panel beside
-            the chart reads the gap between them.
-            <a class="console-head__src" href="about.html#origin">Where the numbers came from</a>
-          </p>
-        </div>
-        <div class="console-head__actions">
-          <button type="button" class="btn btn--secondary btn--sm" data-open-intro>What is this?</button>
-          <button type="button" class="btn btn--primary btn--sm" data-open-quiz>Find my corner</button>
-          <button type="button" class="btn btn--secondary btn--sm" data-open-calc>AI calculator</button>
-        </div>
+      <section class="page-head">
+        <p class="page-eyebrow">About</p>
+        <h2 class="page-head__title">What this is, and what it is made of.</h2>
+        <p class="page-head__lead">
+          A borrowed manga chart, applied to engineering work, to answer one question: what should
+          you expect from someone working outside the corner they came from? Everything below is the
+          source material, the reading key, and the rules of use.
+        </p>
+        <p class="page-head__actions">
+          <button type="button" class="btn btn--secondary btn--sm" data-open-intro>Replay the intro</button>
+        </p>
       </section>
 
-      <div class="hex-controls" id="hexPickers"></div>
+      <div id="aboutSection"></div>
 
-      <div class="hex-wrap">
-        <div class="hex-panel">
-          <div class="hex-stage" id="hexStage" role="group" aria-label="Affinity hexagon"></div>
-        </div>
-        <div class="hex-readout" id="hexReadout" aria-live="polite"></div>
-      </div>
-    </div>
-
-    <div class="console-pager">
       <nav class="pager" id="pager" aria-label="Page navigation"></nav>
     </div>
   </main>
-
   <div class="modal modal--intro" id="introModal" hidden>
     <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
     <div class="modal__dialog modal__dialog--intro" role="dialog" aria-modal="true" aria-labelledby="introModalTitle" tabindex="-1">
@@ -102,34 +88,6 @@
       <div class="modal__body intro" id="introBody"></div>
     </div>
   </div>
-
-  <div class="modal" id="quizModal" hidden>
-    <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
-    <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="quizModalTitle" tabindex="-1">
-      <header class="modal__header">
-        <h2 id="quizModalTitle">Find your corner</h2>
-        <button type="button" class="btn btn--ghost btn--icon" data-modal-close aria-label="Close dialog">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-      </header>
-      <div class="modal__body" id="quizBody" aria-live="polite"></div>
-      <footer class="modal__footer" id="quizFooter"></footer>
-    </div>
-  </div>
-
-  <div class="modal" id="calcModal" hidden>
-    <div class="modal__backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
-    <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="calcModalTitle" tabindex="-1">
-      <header class="modal__header">
-        <h2 id="calcModalTitle">AI amplification calculator</h2>
-        <button type="button" class="btn btn--ghost btn--icon" data-modal-close aria-label="Close dialog">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-      </header>
-      <div class="modal__body" id="calcBody"></div>
-    </div>
-  </div>
-
   <footer class="neo-footer" data-footer-mode="minimal">
     One person's argument about how career effort converts, borrowed from a manga power system. Nothing here is measured, validated, or predictive, and the percentages are illustrative. Use it on yourself. Do not use it to type a colleague, screen a candidate, staff a project, or decide who gets promoted, and do not use it to talk yourself out of a switch you want. Runs entirely in your browser and stores nothing. Hunter x Hunter and Nen are the work of Yoshihiro Togashi, published by Shueisha; this site is unaffiliated commentary and reproduces no art or text from the series.
   </footer>

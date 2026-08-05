@@ -1,13 +1,25 @@
 // ── Entry point ──────────────────────────────────────────────
-// Wire modules together. Keep this file under 50 lines.
+// Five pages share this bundle. Each renderer no-ops when its
+// mount point is absent, so the page itself decides what it shows.
 
 import { state, loadSaved } from './state.js';
-import { render } from './render.js';
+import { renderNav, renderPager } from './nav.js';
+import { renderHexagon } from './hexagon.js';
+import { renderRoleCards, renderSpecialist, renderCrossingGuide, renderFaq, renderAiLadder, renderIntro, renderAbout } from './sections.js';
 import { bindEvents } from './events.js';
 
 function init() {
   loadSaved(state);
-  render(state);
+  renderNav();
+  renderPager();
+  renderHexagon(state);
+  renderRoleCards();
+  renderSpecialist();
+  renderCrossingGuide();
+  renderAiLadder();
+  renderFaq();
+  renderIntro();
+  renderAbout();
   bindEvents(state);
 }
 

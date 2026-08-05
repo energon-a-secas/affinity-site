@@ -1,13 +1,13 @@
 // ── Event handlers ───────────────────────────────────────────
-// Modal focus trap (from template) + hexagon, quiz, and calculator
-// interactions. No inline onclick anywhere; everything is wired here.
+// Modal focus trap plus hexagon, quiz, and calculator wiring.
+// No inline onclick anywhere; everything is bound here.
 
 import { save } from './state.js';
-import { updateHexagon } from './render.js';
+import { updateHexagon } from './hexagon.js';
 import { renderQuiz, renderCalc, updateCalcMeter } from './views.js';
 import { QUIZ } from './data.js';
 
-// ── Modal focus trap (template baseline) ─────────────────────
+// ── Modal focus trap ─────────────────────────────────────────
 
 function getFocusable(root) {
   const sel = [
@@ -26,7 +26,12 @@ let _modalLastFocus = null;
 export function openModal(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
-  _modalLastFocus = document.activeElement;
+  // Opening one modal from inside another (quiz from the intro) hides
+  // the first without claiming the focus slot, so closing the second
+  // still returns focus to whatever the page had before either opened.
+  const prev = getOpenModal();
+  if (prev && prev.id !== id) prev.setAttribute('hidden', '');
+  else _modalLastFocus = document.activeElement;
   modal.removeAttribute('hidden');
   document.body.classList.add('modal-open');
   const dialog = modal.querySelector('.modal__dialog');
@@ -70,36 +75,60 @@ function onModalClick(e) {
 
 // ── App interactions ─────────────────────────────────────────
 
-/** Bind all event listeners. Call once from app.js after render. */
-export function bindEvents(state) {
-  document.addEventListener('keydown', onDocumentKeydown);
-  document.addEventListener('click', onModalClick);
+/** Put focus back on the option just chosen, after a re-render. */
+function restoreQuizFocus(index) {
+  document.querySelector(`#quizBody [data-opt="${index}"]`)?.focus();
+}
 
-  // Hexagon: select a born type.
-  document.getElementById('hexStage')?.addEventListener('click', (e) => {
+/**
+ * Clicking a node sets your affinity. Shift-click (or clicking the
+ * node that is already your affinity) sets the work layer instead,
+ * so both layers are reachable without leaving the chart.
+ */
+function bindHexagon(state) {
+  const stage = document.getElementById('hexStage');
+  if (!stage) return;
+
+  stage.addEventListener('click', (e) => {
     const node = e.target.closest('.hex-node');
     if (!node) return;
-    state.bornType = node.dataset.type;
+    const id = node.dataset.type;
+    if (e.shiftKey || id === state.affinity) state.workingIn = id;
+    else state.affinity = id;
     updateHexagon(state);
     save(state);
   });
 
-  // Open quiz / calculator from header + hero.
-  const openQuiz = () => { renderQuiz(state); openModal('quizModal'); };
-  const openCalc = () => { renderCalc(state); openModal('calcModal'); };
-  document.getElementById('quizBtn')?.addEventListener('click', openQuiz);
-  document.getElementById('heroQuizBtn')?.addEventListener('click', openQuiz);
-  document.getElementById('calcBtn')?.addEventListener('click', openCalc);
-  document.getElementById('heroCalcBtn')?.addEventListener('click', openCalc);
+  const pickers = document.getElementById('hexPickers');
+  pickers?.addEventListener('change', (e) => {
+    if (e.target.id === 'affinitySelect') state.affinity = e.target.value;
+    else if (e.target.id === 'workSelect') state.workingIn = e.target.value;
+    else return;
+    updateHexagon(state);
+    save(state);
+  });
 
-  // Quiz interactions (delegated inside the modal).
+  pickers?.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-label-mode]');
+    if (!btn) return;
+    state.labelMode = btn.dataset.labelMode;
+    updateHexagon(state);
+    save(state);
+    document.querySelector(`[data-label-mode="${state.labelMode}"]`)?.focus();
+  });
+}
+
+function bindQuiz(state) {
   const quizModal = document.getElementById('quizModal');
-  quizModal?.addEventListener('click', (e) => {
+  if (!quizModal) return;
+  quizModal.addEventListener('click', (e) => {
     const opt = e.target.closest('[data-opt]');
     if (opt) {
-      state.quizAnswers[state.quizStep] = Number(opt.dataset.opt);
+      const picked = Number(opt.dataset.opt);
+      state.quizAnswers[state.quizStep] = picked;
       renderQuiz(state);
       save(state);
+      restoreQuizFocus(picked);
       return;
     }
     if (e.target.closest('[data-quiz-next]')) {
@@ -122,25 +151,66 @@ export function bindEvents(state) {
     }
     const apply = e.target.closest('[data-quiz-apply]');
     if (apply) {
-      state.bornType = apply.dataset.type;
+      state.affinity = apply.dataset.type;
       updateHexagon(state);
       save(state);
       closeModal('quizModal');
-      document.getElementById('hexStage')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // No scrollIntoView: the console puts the chart on screen already,
+      // so scrolling only moves it away from where the reader left it.
     }
   });
+}
 
-  // Calculator interactions.
+function bindCalc(state) {
   const calcModal = document.getElementById('calcModal');
-  calcModal?.addEventListener('input', (e) => {
-    if (e.target.id === 'calcAi') {
-      state.aiPct = Number(e.target.value);
-      updateCalcMeter(state);
-      save(state);
-    }
+  if (!calcModal) return;
+  calcModal.addEventListener('input', (e) => {
+    if (e.target.id !== 'calcAi') return;
+    state.aiPct = Number(e.target.value);
+    updateCalcMeter(state);
+    save(state);
   });
-  calcModal?.addEventListener('change', (e) => {
-    if (e.target.id === 'calcYou') { state.calcYou = e.target.value; renderCalc(state); save(state); }
-    if (e.target.id === 'calcTask') { state.calcTask = e.target.value; renderCalc(state); save(state); }
+  calcModal.addEventListener('change', (e) => {
+    if (e.target.id === 'calcYou') state.affinity = e.target.value;
+    else if (e.target.id === 'calcTask') state.workingIn = e.target.value;
+    else return;
+    renderCalc(state);
+    updateHexagon(state);
+    save(state);
   });
+}
+
+// ── Intro popup ──────────────────────────────────────────────
+// The introduction is a popup rather than a hero block, so the chart
+// starts at the top of the screen. It is opened on request only, from
+// the "What is this?" button or the about page. Nothing auto-shows:
+// the chart and its readout are both above the fold, so an unrequested
+// modal covers the thing the reader came for.
+
+/** Click anywhere in the intro to dismiss it, except on its controls. */
+function bindIntro() {
+  const dialog = document.querySelector('#introModal .modal__dialog');
+  if (!dialog) return;
+  dialog.addEventListener('click', (e) => {
+    if (e.target.closest('button, a, input, select, textarea, summary')) return;
+    closeModal('introModal');
+  });
+}
+
+/** Bind all listeners. Called once from app.js after first render. */
+export function bindEvents(state) {
+  document.addEventListener('keydown', onDocumentKeydown);
+  document.addEventListener('click', onModalClick);
+
+  bindHexagon(state);
+  bindQuiz(state);
+  bindCalc(state);
+  bindIntro();
+
+  const openQuiz = () => { renderQuiz(state); openModal('quizModal'); };
+  const openCalc = () => { renderCalc(state); openModal('calcModal'); };
+  const openIntro = () => openModal('introModal');
+  document.querySelectorAll('[data-open-quiz]').forEach((b) => b.addEventListener('click', openQuiz));
+  document.querySelectorAll('[data-open-calc]').forEach((b) => b.addEventListener('click', openCalc));
+  document.querySelectorAll('[data-open-intro]').forEach((b) => b.addEventListener('click', openIntro));
 }

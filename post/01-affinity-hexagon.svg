@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1180" width="1600" height="1180" font-family="'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#1a1040" stop-opacity=".85"/>
+      <stop offset="55%" stop-color="#0a0a24" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#040714" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1180" fill="#040714"/>
+  <rect width="1600" height="1180" fill="url(#glow)"/>
+  
+  
+  <text x="96" y="108" fill="#B015B0" font-size="20" font-weight="700" letter-spacing="3.4">THE SIX TYPES</text>
+  <text x="96" y="156" fill="#f9f9f9" font-size="42" font-weight="700" letter-spacing="-.4">Every engineering job is one of six corners.</text>
+  <text x="96" y="192" fill="rgba(255,255,255,.5)" font-size="21">Hunter x Hunter’s Nen chart, relabelled for tech work.</text>
+  <polygon points="800.0,340.0 1059.8,490.0 1059.8,790.0 800.0,940.0 540.2,790.0 540.2,490.0" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="2"/>
+  <line x1="800" y1="640" x2="800.0" y2="340.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/><line x1="800" y1="640" x2="1059.8" y2="490.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/><line x1="800" y1="640" x2="1059.8" y2="790.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/><line x1="800" y1="640" x2="800.0" y2="940.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/><line x1="800" y1="640" x2="540.2" y2="790.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/><line x1="800" y1="640" x2="540.2" y2="490.0" stroke="rgba(255,255,255,.16)" stroke-width="1.2" stroke-dasharray="5 8"/>
+  <circle cx="800" cy="640" r="94" fill="#040714" opacity=".9"/>
+  <text x="800" y="674" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="96" fill="rgba(255,255,255,.13)">発</text>
+  
+  <g opacity="1">
+    <circle cx="800" cy="340" r="53" fill="#f43f5e" opacity=".16" filter="url(#soft)"/>
+    <circle cx="800" cy="340" r="40" fill="#040714" stroke="#f43f5e" stroke-width="2.5"/>
+    <text x="800" y="353.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#f43f5e">強</text>
+    
+    <text x="800" y="252" text-anchor="middle" fill="#f9f9f9" font-size="25" font-weight="700">Enhancement</text>
+    <text x="800" y="279" text-anchor="middle" fill="#cacaca" font-size="21">Backend / Core</text>
+  </g>
+  <g opacity="1">
+    <circle cx="1059.8076211353316" cy="490" r="53" fill="#a78bfa" opacity=".16" filter="url(#soft)"/>
+    <circle cx="1059.8076211353316" cy="490" r="40" fill="#040714" stroke="#a78bfa" stroke-width="2.5"/>
+    <text x="1059.8076211353316" y="503.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#a78bfa">変</text>
+    
+    <text x="1117.8076211353316" y="464" text-anchor="start" fill="#f9f9f9" font-size="25" font-weight="700">Transmutation</text>
+    <text x="1117.8076211353316" y="491" text-anchor="start" fill="#cacaca" font-size="21">Data / ML</text>
+  </g>
+  <g opacity="1">
+    <circle cx="1059.8076211353316" cy="790" r="53" fill="#4ade80" opacity=".16" filter="url(#soft)"/>
+    <circle cx="1059.8076211353316" cy="790" r="40" fill="#040714" stroke="#4ade80" stroke-width="2.5"/>
+    <text x="1059.8076211353316" y="803.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#4ade80">具</text>
+    
+    <text x="1117.8076211353316" y="808" text-anchor="start" fill="#f9f9f9" font-size="25" font-weight="700">Conjuration</text>
+    <text x="1117.8076211353316" y="835" text-anchor="start" fill="#cacaca" font-size="21">Frontend / Product</text>
+  </g>
+  <g opacity="1">
+    <circle cx="800" cy="940" r="53" fill="#facc15" opacity=".16" filter="url(#soft)"/>
+    <circle cx="800" cy="940" r="40" fill="#040714" stroke="#facc15" stroke-width="2.5"/>
+    <text x="800" y="953.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#facc15">特</text>
+    
+    <text x="800" y="1032" text-anchor="middle" fill="#f9f9f9" font-size="25" font-weight="700">Specialization</text>
+    <text x="800" y="1059" text-anchor="middle" fill="#cacaca" font-size="21">Specialist</text>
+  </g>
+  <g opacity="1">
+    <circle cx="540.1923788646684" cy="790" r="53" fill="#38bdf8" opacity=".16" filter="url(#soft)"/>
+    <circle cx="540.1923788646684" cy="790" r="40" fill="#040714" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="540.1923788646684" y="803.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#38bdf8">操</text>
+    
+    <text x="482.1923788646684" y="808" text-anchor="end" fill="#f9f9f9" font-size="25" font-weight="700">Manipulation</text>
+    <text x="482.1923788646684" y="835" text-anchor="end" fill="#cacaca" font-size="21">Management / PM</text>
+  </g>
+  <g opacity="1">
+    <circle cx="540.1923788646684" cy="490" r="53" fill="#fb923c" opacity=".16" filter="url(#soft)"/>
+    <circle cx="540.1923788646684" cy="490" r="40" fill="#040714" stroke="#fb923c" stroke-width="2.5"/>
+    <text x="540.1923788646684" y="503.6" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="42" fill="#fb923c">放</text>
+    
+    <text x="482.1923788646684" y="464" text-anchor="end" fill="#f9f9f9" font-size="25" font-weight="700">Emission</text>
+    <text x="482.1923788646684" y="491" text-anchor="end" fill="#cacaca" font-size="21">Infra / SRE / Platform</text>
+  </g>
+  <text x="96" y="1128" fill="rgba(255,255,255,.34)" font-size="17">Opposite corners are the hardest crossings: Backend ↔ Specialist · Data ↔ Management · Frontend ↔ Infra</text>
+</svg>

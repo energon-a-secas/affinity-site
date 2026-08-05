@@ -17,13 +17,14 @@ export const TYPES = [
     nen: 'Enhancement',
     kanji: '強',
     role: 'Backend / Core Engineering',
+    short: 'Backend',
     accent: '#f43f5e',
     tagline: 'Reinforce what exists. Effort turns straight into output.',
     nenDesc: 'Reinforces the natural abilities of the user or an object. The most straightforward type: pour aura in, get raw power out.',
     roleDesc: 'You make the thing work, then make it fast and correct. Services, jobs, data models, the load-bearing logic behind a product. Progress is legible: profile it, fix it, ship it.',
     strengths: ['Deep focus on a single hard problem', 'Reliability and correctness under load', 'Turning vague requirements into working systems'],
     watch: 'Enhancers undervalue presentation and politics. The work is real but invisible until it breaks.',
-    withAI: 'AI is a force multiplier here and it shows immediately: boilerplate, test scaffolds, refactors. Your affinity is high, so the amplification lands.',
+    withAI: 'You are already at your ceiling here, so AI arrives as speed rather than as quality: boilerplate, test scaffolds, refactors, all of it faster. More work fits in a week. The work itself is as good as you were.',
     personality: 'Simple, determined, straight-ahead (Gon-type).',
     signals: ['You reach for the debugger before the design doc', 'You measure your day in problems closed, not meetings survived', 'A green test suite genuinely makes you happy'],
   },
@@ -32,6 +33,7 @@ export const TYPES = [
     nen: 'Transmutation',
     kanji: '変',
     role: 'Data / ML Engineering',
+    short: 'Data / ML',
     accent: '#a78bfa',
     tagline: 'Give raw material a property it did not have before.',
     nenDesc: 'Aura takes on the properties of something else, electricity, gum, whatever the user imagines. Playful, unpredictable, hard for outsiders to read.',
@@ -47,6 +49,7 @@ export const TYPES = [
     nen: 'Conjuration',
     kanji: '具',
     role: 'Frontend / Product Engineering',
+    short: 'Frontend',
     accent: '#4ade80',
     tagline: 'Manifest a tangible object that non-experts can actually see.',
     nenDesc: 'Creates a real, material object out of aura, visible and usable even by people with no Nen. The clearest, most concrete output of any type.',
@@ -61,14 +64,15 @@ export const TYPES = [
     id: 'specialization',
     nen: 'Specialization',
     kanji: '特',
-    role: 'Architect / Staff+ / Strategist',
+    role: 'The role there is no title for',
+    short: 'Specialist',
     accent: '#facc15',
     tagline: 'Anything that fits no other category. You do not train into it.',
     nenDesc: 'Abilities that conform to none of the other five types. Defaults to 0% for everyone else, because it cannot be reached by stepping around the ring. It emerges.',
-    roleDesc: 'Systems judgment, cross-discipline synthesis, the call nobody else is positioned to make. Not a promotion you earn by doing more of your current job, an emergent capability built on top of a mastered type plus something innate.',
+    roleDesc: 'Architect, staff engineer, principal, founder: each of those is a title the industry invented to pay for this, and none of them is the thing itself. What the corner holds is systems judgment, synthesis across disciplines, and the call nobody else is positioned to make. Hard to define and hard to hire for, and yet anyone who has worked alongside one can name them without hesitating.',
     strengths: ['Seeing the whole board, not one square', 'Borrowing from every discipline and combining it', 'Being trusted with the ambiguous, high-stakes call'],
     watch: 'This is the corner everyone tries to chase directly for the title and the pay, and it is exactly the trap. See below.',
-    withAI: 'AI amplifies a specialist enormously because their bottleneck is synthesis, not typing. But AI cannot manufacture the judgment, it can only serve someone who already has it.',
+    withAI: 'A specialist gains more than most, because their bottleneck was always synthesis rather than typing. What AI cannot do is manufacture the judgment being synthesised. It serves someone who already has it.',
     personality: 'Individualist, charismatic, plays by their own rules (Chrollo-type).',
     signals: ['People bring you problems that have no clear owner', 'You are valued for what you decline as much as what you build', 'Your best work is invisible: the disaster that never happened'],
     isSpecialist: true,
@@ -78,13 +82,14 @@ export const TYPES = [
     nen: 'Manipulation',
     kanji: '操',
     role: 'Engineering Management / PM / TPM',
+    short: 'Management',
     accent: '#38bdf8',
     tagline: 'Direct living and non-living things toward an outcome.',
     nenDesc: 'Controls living or non-living targets under set conditions. Powerful and far-reaching, but built on rules, trust, and setup rather than raw force.',
     roleDesc: 'You move people, process, priorities, and dependencies toward a goal. Your output is other people\'s output, multiplied or wasted depending on how well you set the conditions.',
     strengths: ['Aligning people who report to no one you control', 'Sequencing work so the right things happen in order', 'Absorbing chaos so the team does not have to'],
     watch: 'Manipulators can drift from the craft until they can no longer evaluate it. Range without depth becomes hand-waving.',
-    withAI: 'Moderate direct affinity, high indirect leverage. AI drafts your docs and plans, but the core skill, reading and moving people, is stubbornly human.',
+    withAI: 'Moderate direct affinity, and a lot of indirect reach. AI drafts your docs and plans, but the core skill, reading and moving people, is stubbornly human.',
     personality: 'Logical, argumentative, systems-minded (Shalnark-type).',
     signals: ['You think in dependencies and unblocking', 'A quiet, shipping team is your favorite artifact', 'You would rather fix the process than the bug'],
   },
@@ -93,13 +98,14 @@ export const TYPES = [
     nen: 'Emission',
     kanji: '放',
     role: 'DevOps / SRE / Platform / Infra',
+    short: 'Infra',
     accent: '#fb923c',
     tagline: 'Separate your aura from your body and project it at a distance.',
     nenDesc: 'Detaches aura from the user and keeps it stable far away. Power that acts where you are not, at scale, across distance, which is exactly the trick and the difficulty.',
     roleDesc: 'You run the systems everything else stands on: CI/CD, clusters, observability, the platform. Your aura is projected across every service at once, and when it holds, nobody notices.',
     strengths: ['Reasoning about distributed, failure-prone systems', 'Automating yourself out of repetitive work', 'Staying calm while everything is on fire'],
-    watch: 'Emitters are invisible when it works and blamed when it breaks. Leverage is huge but recognition lags.',
-    withAI: 'Strong affinity for scripting and config. But note: an Emitter handed AI to do frontend work (the opposite corner) is still capped near 40%, no matter how much AI they pump in.',
+    watch: 'Emitters are invisible when it works and blamed when it breaks. The reach is enormous and the recognition always lags it.',
+    withAI: 'Strong affinity for scripting and config, so the climb here is short. Pointed at frontend work, the corner directly opposite, the same engineer with the same assistant caps at 40%, and pouring in more of it does not move the cap.',
     personality: 'Impatient, quick-tempered, gets it done (Leorio-type).',
     signals: ['You have opinions about YAML you did not want to have', 'You measure success in nines of uptime', 'You automate anything you have done twice'],
   },
@@ -128,44 +134,73 @@ export function ringSteps(i, j) {
  * reached by stepping around the ring.
  */
 export function efficiency(sourceId, targetId) {
-  if (sourceId === targetId) return 100;
-  if (targetId === 'specialization') return 0; // the Specialization exception
   const i = TYPES.findIndex((t) => t.id === sourceId);
   const j = TYPES.findIndex((t) => t.id === targetId);
+  if (i === -1 || j === -1) return 0;
+  if (i === j) return 100; // must precede the exception, or a Specialist reads 0 at home
+  if (targetId === 'specialization') return 0; // the Specialization exception
   return 100 - 20 * ringSteps(i, j);
 }
 
 /**
- * Effective performance once AI is applied. AI does not move you
- * to another type — it scales the affinity you already have.
- * A high-affinity user gets most of the boost; a low-affinity
- * user pours aura into a leaky bucket.
+ * Where you start in a corner with no AI and no training in it,
+ * as a percentage of a trained native.
  *
- * @param {number} base   0..100 affinity efficiency
- * @param {number} aiPct  0..100 how much AI assistance is applied
- * @returns {number} 0..100 effective performance
+ * Your affinity doubles as the fraction of its own ceiling you reach
+ * cold, which keeps the curve continuous at both ends: a native
+ * starts at 100 because their own corner is the one they trained,
+ * and a locked corner starts at 0.
  */
-export function withAI(base, aiPct) {
-  // AI lifts you toward a ceiling, but how much of the assist
-  // actually converts scales with affinity — and steeply. A native
-  // user turns AI into near-full output; an opposite-corner user
-  // pours aura into a leaky bucket. Squaring affinity makes the cap
-  // bite: 80% base → strong lift, 40% base → barely moves.
-  const affinity = base / 100;
-  const maxLift = 100 - base;                 // headroom to a theoretical 100
-  const conversion = 0.15 + 0.85 * affinity * affinity;
-  const lift = maxLift * (aiPct / 100) * conversion;
-  return Math.round(Math.min(100, base + lift));
+export function coldLevel(base) {
+  return (base * base) / 100;
 }
 
-/** Human label for an efficiency band. */
+/**
+ * How much of the remaining climb to your ceiling an AI assist
+ * covers, per axis. Output covers all of it. Judgment barely moves,
+ * because judgment is bought by having been wrong in a domain many
+ * times, which is the one thing an assistant cannot hand you.
+ */
+const AI_CONVERSION = { output: 1, judgment: 0.25 };
+
+/**
+ * Effective level on one axis once AI is applied, as a percentage of
+ * a trained native in the target corner.
+ *
+ * AI does not raise the ceiling. It carries you up to the ceiling
+ * your affinity already set, without the years of training that were
+ * previously the only route there. A backend engineer doing frontend
+ * work with AI ships something real, and usually something good
+ * enough. It is still not what a native produces, and pouring in
+ * more AI never closes that last stretch.
+ *
+ * @param {number} base   0..100 affinity efficiency, which is the ceiling
+ * @param {number} aiPct  0..100 how much AI assistance is applied
+ * @param {'output'|'judgment'} axis  which capability is being measured
+ * @returns {number} 0..base
+ */
+export function withAI(base, aiPct, axis = 'output') {
+  if (base === 0) return 0; // Specialization is not a task you take on
+  const cold = coldLevel(base);
+  const lift = (base - cold) * (aiPct / 100) * AI_CONVERSION[axis];
+  return Math.round(Math.min(base, cold + lift));
+}
+
+/**
+ * Human label for an affinity band.
+ *
+ * The number reads two ways and both hold. Today it is a ceiling:
+ * the best you can currently do in that corner, and no tool raises
+ * it. Over years it is a price: training moves your affinity, and
+ * the number moves with it. Keeping both in view is what stops the
+ * chart being either fatalistic or useless.
+ */
 export function band(pct) {
-  if (pct >= 100) return { label: 'Native', note: 'Your born type. Full ceiling.' };
-  if (pct >= 80) return { label: 'Strong', note: 'Adjacent. Reachable with focused training.' };
-  if (pct >= 60) return { label: 'Workable', note: 'Two steps out. Competent, never native.' };
-  if (pct >= 40) return { label: 'Capped', note: 'Opposite corner. Effort hits a low ceiling fast.' };
-  if (pct > 0) return { label: 'Marginal', note: 'Far from type. Diminishing returns.' };
-  return { label: 'Locked', note: 'Cannot be trained into. It emerges or it does not.' };
+  if (pct >= 100) return { label: 'Native', note: 'Your own corner. Effort converts at full rate.' };
+  if (pct >= 80) return { label: 'Cheap', note: 'One step out. Today it stops here, and it is the cheapest corner to make your own.' };
+  if (pct >= 60) return { label: 'Expensive', note: 'Two steps out. Competent output arrives; competent judgment costs real years.' };
+  if (pct >= 40) return { label: 'Very expensive', note: 'The far corner. Today this is the wall. Getting past it takes years, not tools.' };
+  return { label: 'No direct route', note: 'It emerges on top of a mastered corner. You cannot aim at it.' };
 }
 
 // ── The Specialist problem ───────────────────────────────────
@@ -174,11 +209,12 @@ export function band(pct) {
 
 export const SPECIALIST = {
   intro: 'Specialization sits at 0% for everyone else on purpose. You do not step around the ring into it. It emerges on top of a mastered type plus something you did not train for. That is why chasing it directly, for the title or the pay, is the classic mistake.',
+  naming: 'The chart keeps the manga\'s word for this corner because the industry has not produced a better one. "Architect" is a title with a job description attached, and the description is always narrower than the work. "Subject matter expert" is closer and still wrong: an SME is made by spending years on one subject, and that route is open to anyone willing to spend them. This corner is the one with no such route. What is left is a word for something people recognise on sight and cannot specify in a job posting.',
   references: [
     {
       name: 'Chrollo — Skill Hunter',
       nen: 'Copies and refines other people\'s abilities.',
-      tech: 'The Architect who borrows expertise from every discipline and synthesizes it into judgment — but only after paying, in years, for each thing they copied. The synthesis is the skill; the copying has brutal conditions.',
+      tech: 'The engineer who borrows from every discipline and synthesises the borrowings into judgment, having paid in years for each thing they copied. The synthesis is the skill. The copying comes with brutal conditions.',
     },
     {
       name: 'Kurapika — Emperor Time',

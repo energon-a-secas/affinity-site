@@ -2,7 +2,7 @@
 
 # Affinity
 
-Map your tech role to a Hunter x Hunter Nen type and see why affinity, not effort, sets your ceiling
+Know what to expect from an engineer working outside their corner, and what AI does and does not change
 
 [![Live][badge-site]][url-site]
 [![HTML5][badge-html]][url-html]
@@ -30,9 +30,11 @@ Map your tech role to a Hunter x Hunter Nen type and see why affinity, not effor
 
 ## Overview
 
-Affinity borrows the Nen efficiency chart from Hunter x Hunter and applies it to tech careers. Each of the six Nen types maps to a base engineering role, and the same rule holds: you work at 100% in your born type and lose about 20% for every step away from it. It exists to explain, without judgment, why effort alone does not close a career gap, why AI amplifies the affinity you already have instead of granting a new one, and why the Specialist role cannot be chased directly.
+Affinity borrows the Nen efficiency chart from Hunter x Hunter and applies it to tech careers. Each of the six Nen categories maps to a kind of engineering work, and the same rule holds: you run at 100% in your own corner and lose about 20% for every step away from it. It exists to explain, without judgment, why crossing between kinds of engineering work costs more than the people recommending it admit, why AI carries you up to the ceiling your affinity already set rather than raising it, and why the Specialist corner has no direct route into it.
 
-This is an internal, unlisted tool. It is not indexed and does not appear on the Neorgon hub.
+Published but unlisted: reachable by link, `noindex`, and absent from the Neorgon hub.
+
+The objections this model earns are catalogued in [docs/model-review.md](docs/model-review.md) and answered on the page itself.
 
 **Live:** affinity.neorgon.com
 
@@ -43,7 +45,7 @@ This is an internal, unlisted tool. It is not indexed and does not appear on the
 - **Enhancement** -- Backend / Core Engineering (reinforce what exists)
 - **Transmutation** -- Data / ML Engineering (give raw material new properties)
 - **Conjuration** -- Frontend / Product Engineering (manifest what users see)
-- **Specialization** -- Architect / Staff+ / Strategist (fits no other category)
+- **Specialization** -- Specialist, the role there is no title for (fits no other category)
 - **Manipulation** -- Engineering Management / PM / TPM (direct people and process)
 - **Emission** -- DevOps / SRE / Platform / Infra (project power at a distance)
 
@@ -53,11 +55,11 @@ Opposites (three steps apart on the hexagon) are the hardest crossings: Emission
 
 ## Features
 
-- **Interactive affinity hexagon** -- pick your born type and watch every other corner recompute to 100 / 80 / 60 / 40
-- **Six role cards** -- each Nen type, its tech role, signature strengths, what to watch for, and what AI actually does for it
-- **AI amplification calculator** -- choose who you are and what you are asked to do, then pour AI in with a slider; low-affinity work stays capped no matter how much AI is applied
+- **Interactive affinity hexagon** -- two selectable layers (the corner your judgment came from, the corner your job is in), tech role labels by default with Nen names one click away, and an expectation panel that reads the gap
+- **AI amplification calculator** -- choose who you are and what you are asked to do, then pour AI in with a slider; both bars climb toward a marked ceiling and neither passes it
+- **Six corner cards** -- each kind of work, its Nen category, what the corner asks for, and what AI does for it
 - **Find-your-type quiz** -- five questions that surface your closest affinity (and any strong dual)
-- **The Specialist explainer** -- why the Architect corner cannot be trained into directly, grounded in Chrollo, Kurapika, and innate powers
+- **The Specialist explainer** -- why this corner has no direct route in, why it keeps the manga's word rather than a job title, and how it differs from a subject matter expert
 
 ---
 
@@ -75,20 +77,34 @@ make serve   # http://localhost:8855
 
 ![Architecture](docs/architecture.svg)
 
+Five pages share one JS bundle. Every renderer no-ops when its mount point is absent, so a page
+declares what it shows by which `id`s it contains.
+
 ```
 affinity-site/
-├── index.html          # App shell + quiz/calculator modals
+├── index.html           # The model: hexagon, layer pickers, expectation readout, intro popup
+├── types.html           # The six corners + the Specialist explainer
+├── crossing.html        # Mobility, what AI changes, where to point it first
+├── faq.html             # Objections
+├── about.html           # What this is, where the chart came from, how to read and use it
 ├── css/
-│   └── style.css        # Design tokens + hexagon, cards, calculator styles
+│   └── style.css        # Design tokens + console layout, hexagon, cards, calculator
 ├── js/
-│   ├── app.js           # Entry point (<50 lines)
-│   ├── state.js         # Born type, quiz answers, slider (localStorage)
-│   ├── data.js          # Six types, efficiency() + withAI() math, quiz, Specialist copy
-│   ├── render.js        # Hexagon, role cards, Specialist section
-│   ├── views.js         # Quiz and AI calculator modal views
-│   ├── events.js        # Hexagon / quiz / calculator wiring + modal focus trap
+│   ├── app.js           # Entry point (<30 lines)
+│   ├── state.js         # Two layers, quiz answers, slider (localStorage, validated on load)
+│   ├── data.js          # Six types, efficiency() / coldLevel() / withAI() / band(), quiz
+│   ├── expect.js        # Forecast layer: what to expect, named crossings, the AI ladder
+│   ├── about.js         # Intro copy, provenance, sources, the two readings
+│   ├── faq.js           # Objections as concede/hold pairs
+│   ├── nav.js           # Page set, header nav, prev/next pager
+│   ├── hexagon.js       # SVG web + efficiency polygon, layer pickers, readout
+│   ├── sections.js      # Corner cards, Specialist, crossings, ladder, FAQ, about, intro
+│   ├── views.js         # Quiz and AI calculator modal interiors
+│   ├── events.js        # Modal focus trap, hexagon / quiz / calculator wiring
 │   └── utils.js         # escHtml, $ element cache
+├── post/                # Medium write-up + generated diagrams
 └── docs/
+    ├── model-review.md  # What the reviews found, fixed, and left open
     └── architecture.mmd # Mermaid source for the diagram above
 ```
 

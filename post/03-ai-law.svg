@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1044" width="1600" height="1044" font-family="'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#1a1040" stop-opacity=".85"/>
+      <stop offset="55%" stop-color="#0a0a24" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#040714" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1044" fill="#040714"/>
+  <rect width="1600" height="1044" fill="url(#glow)"/>
+  
+  
+  <text x="96" y="108" fill="#B015B0" font-size="20" font-weight="700" letter-spacing="3.4">THE AI LAW</text>
+  <text x="96" y="156" fill="#f9f9f9" font-size="42" font-weight="700" letter-spacing="-.4">AI is aura. It is not a type change.</text>
+  <text x="96" y="192" fill="rgba(255,255,255,.5)" font-size="21">Two engineers, the same frontend task, all the AI they want.</text>
+
+  <text x="96" y="272" fill="#4ade80" font-size="26" font-weight="700">Born Conjurer — frontend is home</text>
+  <text x="1340" y="288" text-anchor="end" fill="rgba(255,255,255,.5)" font-size="18" font-weight="700">CEILING 100%</text>
+  
+    <text x="528" y="346" text-anchor="end" fill="#f9f9f9" font-size="23" font-weight="600">Output shipped</text>
+    <rect x="560" y="316" width="780" height="46" rx="8" fill="rgba(255,255,255,.05)"/>
+    <rect x="560" y="316" width="780.0" height="46" rx="8" fill="#4ade80" fill-opacity=".95"/>
+    <rect x="1340.0" y="316" width="0.0" height="46" rx="8" fill="#4ade80" fill-opacity=".34"/>
+    
+    <rect x="1338.0" y="306" width="4" height="66" rx="2" fill="#f9f9f9"/>
+    <text x="1366" y="348" fill="#4ade80" font-size="26" font-weight="700">100%</text>
+    
+  
+    <text x="528" y="460" text-anchor="end" fill="#f9f9f9" font-size="23" font-weight="600">Judgment to grade it</text>
+    <rect x="560" y="430" width="780" height="46" rx="8" fill="rgba(255,255,255,.05)"/>
+    <rect x="560" y="430" width="780.0" height="46" rx="8" fill="#4ade80" fill-opacity=".95"/>
+    <rect x="1340.0" y="430" width="0.0" height="46" rx="8" fill="#4ade80" fill-opacity=".34"/>
+    
+    <rect x="1338.0" y="420" width="4" height="66" rx="2" fill="#f9f9f9"/>
+    <text x="1366" y="462" fill="#4ade80" font-size="26" font-weight="700">100%</text>
+    <text x="560" y="514" fill="rgba(255,255,255,.5)" font-size="19">Already at the ceiling. What AI buys here is speed, which this chart cannot draw.</text>
+
+  <line x1="96" y1="566" x2="1504" y2="566" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+
+  <text x="96" y="642" fill="#fb923c" font-size="26" font-weight="700">Born Emitter — infra, the opposite corner</text>
+  <text x="872" y="658" text-anchor="end" fill="rgba(255,255,255,.5)" font-size="18" font-weight="700">CEILING 40%</text>
+  
+    <text x="528" y="716" text-anchor="end" fill="#f9f9f9" font-size="23" font-weight="600">Output shipped</text>
+    <rect x="560" y="686" width="780" height="46" rx="8" fill="rgba(255,255,255,.05)"/>
+    <rect x="560" y="686" width="124.8" height="46" rx="8" fill="#fb923c" fill-opacity=".95"/>
+    <rect x="684.8" y="686" width="187.2" height="46" rx="8" fill="#fb923c" fill-opacity=".34"/>
+    <rect x="684.8" y="686" width="2" height="46" fill="#040714" opacity=".9"/>
+    <rect x="870.0" y="676" width="4" height="66" rx="2" fill="#f9f9f9"/>
+    <text x="1366" y="718" fill="#fb923c" font-size="26" font-weight="700">40%</text>
+    
+  
+    <text x="528" y="830" text-anchor="end" fill="#f9f9f9" font-size="23" font-weight="600">Judgment to grade it</text>
+    <rect x="560" y="800" width="780" height="46" rx="8" fill="rgba(255,255,255,.05)"/>
+    <rect x="560" y="800" width="124.8" height="46" rx="8" fill="#fb923c" fill-opacity=".95"/>
+    <rect x="684.8" y="800" width="46.8" height="46" rx="8" fill="#fb923c" fill-opacity=".34"/>
+    <rect x="684.8" y="800" width="2" height="46" fill="#040714" opacity=".9"/>
+    <rect x="870.0" y="790" width="4" height="66" rx="2" fill="#f9f9f9"/>
+    <text x="1366" y="832" fill="#fb923c" font-size="26" font-weight="700">22%</text>
+    <text x="560" y="884" fill="rgba(255,255,255,.5)" font-size="19">Ships it, cannot tell that it is subtly wrong. This is where the 40% actually bites.</text>
+
+  <rect x="560" y="948" width="18" height="18" rx="4" fill="rgba(255,255,255,.55)"/>
+  <text x="588" y="963" fill="rgba(255,255,255,.5)" font-size="18">Where you stand cold</text>
+  <rect x="806" y="948" width="18" height="18" rx="4" fill="rgba(255,255,255,.22)"/>
+  <text x="834" y="963" fill="rgba(255,255,255,.5)" font-size="18">Added by AI</text>
+  <rect x="1012" y="945" width="4" height="24" rx="2" fill="#f9f9f9"/>
+  <text x="1030" y="963" fill="rgba(255,255,255,.5)" font-size="18">Ceiling, which never moves</text>
+  <text x="96" y="1000" fill="rgba(255,255,255,.34)" font-size="17">AI carries you up to the ceiling your affinity already set. It does not raise the ceiling.</text>
+</svg>

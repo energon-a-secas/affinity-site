@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 880" width="1800" height="880" font-family="'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#1a1040" stop-opacity=".85"/>
+      <stop offset="55%" stop-color="#0a0a24" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#040714" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="880" fill="#040714"/>
+  <rect width="1800" height="880" fill="url(#glow)"/>
+  
+  
+  <text x="96" y="108" fill="#B015B0" font-size="20" font-weight="700" letter-spacing="3.4">READING YOUR OWN CHART</text>
+  <text x="96" y="156" fill="#f9f9f9" font-size="42" font-weight="700" letter-spacing="-.4">What this looks like over one career.</text>
+  <text x="96" y="192" fill="rgba(255,255,255,.5)" font-size="21">The corner does not move much. Where you point it does.</text>
+  
+    <text x="340" y="242" text-anchor="middle" fill="#f9f9f9" font-size="27" font-weight="700">Early</text>
+    <polygon points="340.0,338.0 454.3,404.0 454.3,536.0 340.0,602.0 225.7,536.0 225.7,404.0" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.6"/>
+    
+    <circle cx="340.0" cy="338.0" r="25" fill="#040714" stroke="#f43f5e" stroke-width="3" />
+      <text x="340.0" y="347.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="#f43f5e">強</text>
+      <text x="340.0" y="298.0" text-anchor="middle" fill="#f43f5e" font-size="18" font-weight="600">Backend</text><circle cx="454.3" cy="404.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="454.3" y="410.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">変</text>
+      <circle cx="454.3" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="454.3" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">具</text>
+      <circle cx="340.0" cy="602.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="340.0" y="608.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">特</text>
+      <circle cx="225.7" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="225.7" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">操</text>
+      <circle cx="225.7" cy="404.0" r="25" fill="#040714" stroke="#fb923c" stroke-width="3" />
+      <text x="225.7" y="413.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="#fb923c">放</text>
+      <text x="185.7" y="364.0" text-anchor="end" fill="#fb923c" font-size="18" font-weight="600">Infra</text>
+    <text x="340" y="694" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">Read as infra by the dev side</text><text x="340" y="724" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">and as dev by the infra side.</text>
+    <text x="900" y="242" text-anchor="middle" fill="#f9f9f9" font-size="27" font-weight="700">Recent years</text>
+    <polygon points="900.0,338.0 1014.3,404.0 1014.3,536.0 900.0,602.0 785.7,536.0 785.7,404.0" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.6"/>
+    
+    <circle cx="900.0" cy="338.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="900.0" y="344.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">強</text>
+      <circle cx="1014.3" cy="404.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1014.3" y="410.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">変</text>
+      <circle cx="1014.3" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1014.3" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">具</text>
+      <circle cx="900.0" cy="602.0" r="25" fill="#040714" stroke="#facc15" stroke-width="3" />
+      <text x="900.0" y="611.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="#facc15">特</text>
+      <text x="900.0" y="652.0" text-anchor="middle" fill="#facc15" font-size="18" font-weight="600">Specialist</text><circle cx="785.7" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="785.7" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">操</text>
+      <circle cx="785.7" cy="404.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="785.7" y="410.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">放</text>
+      
+    <text x="900" y="694" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">Finally positioned in the corner</text><text x="900" y="724" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">the work was always shaped like.</text>
+    <text x="1460" y="242" text-anchor="middle" fill="#f9f9f9" font-size="27" font-weight="700">Now</text>
+    <polygon points="1460.0,338.0 1574.3,404.0 1574.3,536.0 1460.0,602.0 1345.7,536.0 1345.7,404.0" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.6"/>
+    <line x1="1460.0" y1="602.0" x2="1574.3" y2="404.0" stroke="#a78bfa" stroke-width="3" stroke-dasharray="8 7" opacity=".85"/>
+    <circle cx="1574.3" cy="404.0" r="15" fill="#a78bfa" opacity=".9"/>
+    <circle cx="1460.0" cy="338.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1460.0" y="344.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">強</text>
+      <circle cx="1574.3" cy="404.0" r="25" fill="#040714" stroke="#a78bfa" stroke-width="3" stroke-dasharray="5 4"/>
+      <text x="1574.3" y="413.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="#a78bfa">変</text>
+      <text x="1614.3" y="364.0" text-anchor="start" fill="#a78bfa" font-size="18" font-weight="600">Data / ML</text><circle cx="1574.3" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1574.3" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">具</text>
+      <circle cx="1460.0" cy="602.0" r="25" fill="#040714" stroke="#facc15" stroke-width="3" />
+      <text x="1460.0" y="611.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="#facc15">特</text>
+      <text x="1460.0" y="652.0" text-anchor="middle" fill="#facc15" font-size="18" font-weight="600">Specialist</text><circle cx="1345.7" cy="536.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1345.7" y="542.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">操</text>
+      <circle cx="1345.7" cy="404.0" r="16" fill="#040714" stroke="rgba(255,255,255,.18)" stroke-width="1.5" />
+      <text x="1345.7" y="410.0" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="17" fill="rgba(255,255,255,.30)">放</text>
+      
+    <text x="1460" y="694" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">Two steps out, deliberately.</text><text x="1460" y="724" text-anchor="middle" fill="rgba(255,255,255,.5)" font-size="20">A 60% corner, worked at honestly.</text>
+  <text x="96" y="840" fill="rgba(255,255,255,.34)" font-size="17">Specialization → Transmutation is two steps. The model says 60% and that is roughly what it feels like.</text>
+</svg>
