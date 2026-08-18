@@ -1,4 +1,4 @@
-# CLAUDE.md — affinity-site
+# CLAUDE.md: affinity-site
 
 Guidance for Claude Code when working in this project.
 
@@ -24,7 +24,7 @@ Port 8855. Requires an HTTP server; ES modules do not load over `file://`.
 ## Pages
 
 Five pages, one shared JS bundle. Every renderer no-ops when its mount point is absent, so a page
-declares what it shows by which `id`s it contains. Nav and pager are injected from `js/nav.js` —
+declares what it shows by which `id`s it contains. Nav and pager are injected from `js/nav.js`,
 add a page there and both update.
 
 | Page | Mounts | Shows |
@@ -36,8 +36,8 @@ add a page there and both update.
 | `about.html` | `aboutSection` `introBody` | What this is, provenance + sources, how to read a number, use/misuse guide |
 
 `index.html` is a **one-screen console**, not a document: `.container--console` takes a fixed
-`calc(100dvh - header)` so the chart and the readout are on screen together. That is a hard height on
-purpose — a `min-height` lets the readout push the chart below the fold, which is the problem the
+`calc(100dvh: header)` so the chart and the readout are on screen together. That is a hard height on
+purpose: a `min-height` lets the readout push the chart below the fold, which is the problem the
 layout exists to solve. The pager sits outside the console so it never claims fold space.
 
 The introduction is a **popup**, not a hero block: `js/about.js` `INTRO` → `renderIntro()` →
@@ -50,7 +50,7 @@ The introduction is a **popup**, not a hero block: `js/about.js` `INTRO` → `re
 
 Nothing on the site calls `scrollIntoView`. The console puts everything above the fold, so a
 programmatic scroll can only move the page away from where the reader left it. `renderNav()` centres
-the current tab by setting `scrollLeft` on the strip for the same reason — `scrollIntoView` walks up
+the current tab by setting `scrollLeft` on the strip for the same reason, `scrollIntoView` walks up
 the ancestors and scrolls the page.
 
 ## Architecture
@@ -84,7 +84,7 @@ Collapsing them back into a single `bornType` reintroduces the fatalism the whol
 on purpose: "Manipulation" as a label for management is loaded in English and turns readers away
 before they reach the argument.
 
-## Invariants — do not break these
+## Invariants: do not break these
 
 - **`efficiency()` checks identity before the Specialization exception.** Swap those two lines and a
   born Specialist reads 0% at their own job.
@@ -95,14 +95,14 @@ before they reach the argument.
   case, which is the entire point of the site.
 - **AI never exceeds `base`.** `withAI()` starts at `coldLevel(base)` = `base²/100` and climbs
   toward `base`, which is the ceiling. `output` covers the whole remaining climb, `judgment` covers
-  0.25 of it. Do not restore a model that adds on top of `base` toward 100 — that says an infra
+  0.25 of it. Do not restore a model that adds on top of `base` toward 100. That says an infra
   engineer with an assistant produces 88% of a native's frontend work, which is the claim the site
   exists to deny. The `base²/100` floor is what keeps the curve continuous: a native starts at their
   ceiling because their own corner is the one they trained.
 - **The number reads two ways and the copy must hold both.** *Today* it is a ceiling: the best you
   can currently do there, and no tool raises it. *Over years* it is a price: training moves your
   affinity and the number moves with it. Dropping the first makes the calculator a lie; dropping the
-  second makes the site fatalistic. Stated once on `about.html` via `TWO_READINGS` — keep it there.
+  second makes the site fatalistic. Stated once on `about.html` via `TWO_READINGS`, keep it there.
 - **Specialization's tech label is "Specialist", deliberately not a job title.** "Architect" is
   narrower than the work and "SME" is reachable with time, which is the one thing this corner is
   not. See `SPECIALIST.naming`.
