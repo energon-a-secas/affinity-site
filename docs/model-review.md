@@ -1,4 +1,4 @@
-# Affinity — model review and open concerns
+# Affinity: model review and open concerns
 
 Four independent reviews of the model, the copy, the code, and the visual design.
 This file records what they found, what was fixed, and what is deliberately left open.
@@ -165,8 +165,8 @@ the argument in one glyph.
 
 ### The claim conflict this exposed
 
-The site had been saying "the percentage is a price, not a ceiling" — the framing the first review
-recommended — directly alongside a calculator that now draws a hard wall. Both are true of different
+The site had been saying "the percentage is a price, not a ceiling". The framing the first review
+recommended: directly alongside a calculator that now draws a hard wall. Both are true of different
 timescales, and saying so is stronger than either alone:
 
 - **Today it is a ceiling.** The best you can currently do in that corner. No tool raises it.
@@ -179,7 +179,7 @@ now stated once, on the about page, as `TWO_READINGS`.
 
 | Concern | Resolution |
 |---|---|
-| "Architect" was too narrow for Specialization, and SME is wrong because time and effort *can* buy it | The tech label is now **Specialist** — deliberately not a job title, because no job title fits. `SPECIALIST.naming` says why, and a new FAQ item handles the SME distinction |
+| "Architect" was too narrow for Specialization, and SME is wrong because time and effort *can* buy it | The tech label is now **Specialist**, deliberately not a job title, because no job title fits. `SPECIALIST.naming` says why, and a new FAQ item handles the SME distinction |
 | Skilled AI use is a real variable the meter ignored | Not another slider. `AI_LADDER` on the crossing page states the order it pays back in: reinforce your own corner, then the adjacent ones, then across the chart. Skill changes how fast you climb, never where the climb stops |
 | Modal dialogs were surfaced with `--surface-1`, i.e. 3% white over a blurred backdrop, and were hard to read | Opaque `--surface-panel`, with the reason recorded as a gotcha next to the rule |
 | The model page forced a scroll between the chart and the panel that reads it | `index.html` is a fixed-height console; the readout scrolls inside itself |

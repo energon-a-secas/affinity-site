@@ -122,7 +122,7 @@ function renderPickers(s) {
   const el = $('hexPickers');
   if (!el) return;
   const opts = (sel) => TYPES.map((t) =>
-    `<option value="${t.id}"${t.id === sel ? ' selected' : ''}>${escHtml(t.short)} — ${escHtml(t.nen)}</option>`).join('');
+    `<option value="${t.id}"${t.id === sel ? ' selected' : ''}>${escHtml(t.short)}, ${escHtml(t.nen)}</option>`).join('');
 
   el.innerHTML = `
     <label class="layer-field layer-field--you">

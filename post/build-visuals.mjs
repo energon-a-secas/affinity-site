@@ -233,14 +233,14 @@ function aiLaw() {
   const body = `
   ${heading(96, 108, 'The AI law', 'AI is aura. It is not a type change.', 'Two engineers, the same frontend task, all the AI they want.')}
 
-  <text x="96" y="272" fill="${G}" font-size="26" font-weight="700">Born Conjurer — frontend is home</text>
+  <text x="96" y="272" fill="${G}" font-size="26" font-weight="700">Born Conjurer, frontend is home</text>
   <text x="${barX + (home / 100) * barW}" y="288" text-anchor="end" fill="${MUTE}" font-size="18" font-weight="700">CEILING ${home}%</text>
   ${bar(316, 'Output shipped', home, 'output', G, '')}
   ${bar(430, 'Judgment to grade it', home, 'judgment', G, 'Already at the ceiling. What AI buys here is speed, which this chart cannot draw.')}
 
   <line x1="96" y1="566" x2="${W - 96}" y2="566" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
 
-  <text x="96" y="642" fill="${O}" font-size="26" font-weight="700">Born Emitter — infra, the opposite corner</text>
+  <text x="96" y="642" fill="${O}" font-size="26" font-weight="700">Born Emitter, infra, the opposite corner</text>
   <text x="${barX + (away / 100) * barW}" y="658" text-anchor="end" fill="${MUTE}" font-size="18" font-weight="700">CEILING ${away}%</text>
   ${bar(686, 'Output shipped', away, 'output', O, '')}
   ${bar(800, 'Judgment to grade it', away, 'judgment', O, 'Ships it, cannot tell that it is subtly wrong. This is where the 40% actually bites.')}

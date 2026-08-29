@@ -212,17 +212,17 @@ export const SPECIALIST = {
   naming: 'The chart keeps the manga\'s word for this corner because the industry has not produced a better one. "Architect" is a title with a job description attached, and the description is always narrower than the work. "Subject matter expert" is closer and still wrong: an SME is made by spending years on one subject, and that route is open to anyone willing to spend them. This corner is the one with no such route. What is left is a word for something people recognise on sight and cannot specify in a job posting.',
   references: [
     {
-      name: 'Chrollo — Skill Hunter',
+      name: 'Chrollo: Skill Hunter',
       nen: 'Copies and refines other people\'s abilities.',
       tech: 'The engineer who borrows from every discipline and synthesises the borrowings into judgment, having paid in years for each thing they copied. The synthesis is the skill. The copying comes with brutal conditions.',
     },
     {
-      name: 'Kurapika — Emperor Time',
+      name: 'Kurapika: Emperor Time',
       nen: '100% in all six types at once, at extreme personal cost.',
-      tech: 'The Staff engineer who can go deep anywhere inside their domain of obsession — and pays for it in burnout and tunnel vision. Total range is real, and it is not free.',
+      tech: 'The Staff engineer who can go deep anywhere inside their domain of obsession, and pays for it in burnout and tunnel vision. Total range is real, and it is not free.',
     },
     {
-      name: 'Neon / Pakunoda — innate powers',
+      name: 'Neon / Pakunoda: innate powers',
       nen: 'Prediction and memory-reading. Never trained, just born.',
       tech: 'Taste. Systems intuition. The call you cannot explain. Some of the specialist edge is simply innate and no amount of study manufactures it.',
     },
@@ -238,12 +238,12 @@ export const QUIZ = [
   {
     q: 'A project kicks off. What pulls you first?',
     options: [
-      { text: 'The core logic — what actually has to work', scores: { enhancement: 2 } },
-      { text: 'The data — what we can learn or predict from it', scores: { transmutation: 2 } },
-      { text: 'The interface — what people will see and touch', scores: { conjuration: 2 } },
-      { text: 'The shape — how the whole thing fits together', scores: { specialization: 2 } },
-      { text: 'The people — who does what, in what order', scores: { manipulation: 2 } },
-      { text: 'The plumbing — how it runs, deploys, and scales', scores: { emission: 2 } },
+      { text: 'The core logic: what actually has to work', scores: { enhancement: 2 } },
+      { text: 'The data: what we can learn or predict from it', scores: { transmutation: 2 } },
+      { text: 'The interface: what people will see and touch', scores: { conjuration: 2 } },
+      { text: 'The shape: how the whole thing fits together', scores: { specialization: 2 } },
+      { text: 'The people: who does what, in what order', scores: { manipulation: 2 } },
+      { text: 'The plumbing: how it runs, deploys, and scales', scores: { emission: 2 } },
     ],
   },
   {

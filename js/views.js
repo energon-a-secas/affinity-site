@@ -236,7 +236,7 @@ function slug(label) {
 /** Roles are truncated to their first segment so the option fits a half-width select. */
 function optionList(selected, list) {
   return list.map((t) => {
-    const label = `${t.nen} — ${t.short}`;
+    const label = `${t.nen}: ${t.short}`;
     return `<option value="${t.id}"${t.id === selected ? ' selected' : ''}>${escHtml(label)}</option>`;
   }).join('');
 }
