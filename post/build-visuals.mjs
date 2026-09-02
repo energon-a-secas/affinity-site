@@ -192,7 +192,7 @@ function falloff(bornId = 'emission') {
   <text x="${(p.x + 92).toFixed(1)}" y="${(p.y + 96).toFixed(1)}" fill="${cj.color}" font-size="22" font-weight="700">“Hey, can you do the website?”</text>
   <text x="${(p.x + 92).toFixed(1)}" y="${(p.y + 126).toFixed(1)}" fill="${MUTE}" font-size="20">The opposite corner. This is the 40%.</text>`;
   })()}
-  ${footnote(96, H - 82, `Born ${born.nen} (${born.role}) — the shape is what carries over.`)}
+  ${footnote(96, H - 82, `Born ${born.nen} (${born.role}): the shape is what carries over.`)}
   ${footnote(96, H - 50, 'Specialization is locked at 0 for everyone who is not one. You do not step around the ring into it.')}`;
 
   return frame(W, H, body);
