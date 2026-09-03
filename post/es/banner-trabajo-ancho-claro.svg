@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" font-family="'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1efee"/>
+      <stop offset="55%" stop-color="#fbf9f1"/>
+      <stop offset="100%" stop-color="#fffdee"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbf9f1" stop-opacity=".97"/>
+      <stop offset="58%" stop-color="#fbf9f1" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#fbf9f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="300" fill="url(#wash)"/>
+  
+  
+  <polygon points="280.0,45.0 370.9,97.5 370.9,202.5 280.0,255.0 189.1,202.5 189.1,97.5" fill="none" stroke="rgba(23,22,29,.22)" stroke-width="2.3"/>
+  <line x1="280.0" y1="150.0" x2="280.0" y2="45.0" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/><line x1="280.0" y1="150.0" x2="370.9" y2="97.5" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/><line x1="280.0" y1="150.0" x2="370.9" y2="202.5" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/><line x1="280.0" y1="150.0" x2="280.0" y2="255.0" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/><line x1="280.0" y1="150.0" x2="189.1" y2="202.5" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/><line x1="280.0" y1="150.0" x2="189.1" y2="97.5" stroke="rgba(23,22,29,.22)" stroke-width="1.4" stroke-dasharray="5 8"/>
+  
+  <circle cx="280.0" cy="45.0" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="280.0" cy="45.0" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="370.9" cy="97.5" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="370.9" cy="97.5" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="370.9" cy="202.5" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="370.9" cy="202.5" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="280.0" cy="255.0" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="280.0" cy="255.0" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="189.1" cy="202.5" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="189.1" cy="202.5" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="189.1" cy="97.5" r="29" fill="#17161d" opacity=".10" filter="url(#soft)"/>
+  <circle cx="189.1" cy="97.5" r="18" fill="#ffffff" stroke="#17161d" stroke-width="3.2"/>
+  <circle cx="280" cy="150" r="62" fill="url(#core)"/>
+  <text x="460" y="185.0" text-anchor="start" fill="#17161d"
+        font-size="100" font-weight="700" letter-spacing="16.0">TRABAJO</text>
+</svg>

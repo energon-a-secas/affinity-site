@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1efee"/>
+      <stop offset="55%" stop-color="#fbf9f1"/>
+      <stop offset="100%" stop-color="#fffdee"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbf9f1" stop-opacity=".97"/>
+      <stop offset="58%" stop-color="#fbf9f1" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#fbf9f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wash)"/>
+  
+  <polygon points="800.0,232.0 1006.1,351.0 1006.1,589.0 800.0,708.0 593.9,589.0 593.9,351.0" fill="none" stroke="rgba(23,22,29,.22)" stroke-width="2.6"/>
+  <line x1="800" y1="470" x2="800.0" y2="232.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/><line x1="800" y1="470" x2="1006.1" y2="351.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/><line x1="800" y1="470" x2="1006.1" y2="589.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/><line x1="800" y1="470" x2="800.0" y2="708.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/><line x1="800" y1="470" x2="593.9" y2="589.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/><line x1="800" y1="470" x2="593.9" y2="351.0" stroke="rgba(23,22,29,.22)" stroke-width="1.7" stroke-dasharray="5 8"/>
+  
+  <circle cx="800" cy="470" r="124" fill="url(#core)"/>
+  <text x="800" y="477.7" text-anchor="middle" fill="rgba(23,22,29,.34)"
+        font-size="22" font-weight="700" letter-spacing="3.5">TECNOLOGÍA</text>
+  
+  <g opacity="1">
+    <circle cx="800" cy="232" r="57" fill="#be123c" opacity=".20" filter="url(#soft)"/>
+    <circle cx="800" cy="232" r="44" fill="#ffffff" stroke="#be123c" stroke-width="3.6"/>
+    <text x="800" y="246.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#be123c">強</text>
+    <text x="800.0" y="130.0" text-anchor="middle" fill="#17161d" font-size="26" font-weight="700">Intensificación</text>
+    <text x="800.0" y="158.0" text-anchor="middle" fill="#57555f" font-size="21" font-weight="600">Backend / Core</text>
+  </g>
+  <g opacity="1">
+    <circle cx="1006.1140461006964" cy="351" r="57" fill="#6d28d9" opacity=".20" filter="url(#soft)"/>
+    <circle cx="1006.1140461006964" cy="351" r="44" fill="#ffffff" stroke="#6d28d9" stroke-width="3.6"/>
+    <text x="1006.1140461006964" y="365.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#6d28d9">変</text>
+    <text x="1080.1" y="341.0" text-anchor="start" fill="#17161d" font-size="26" font-weight="700">Transmutación</text>
+    <text x="1080.1" y="369.0" text-anchor="start" fill="#57555f" font-size="21" font-weight="600">Datos / ML</text>
+  </g>
+  <g opacity="1">
+    <circle cx="1006.1140461006964" cy="589" r="57" fill="#166534" opacity=".20" filter="url(#soft)"/>
+    <circle cx="1006.1140461006964" cy="589" r="44" fill="#ffffff" stroke="#166534" stroke-width="3.6"/>
+    <text x="1006.1140461006964" y="603.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#166534">具</text>
+    <text x="1080.1" y="599.0" text-anchor="start" fill="#17161d" font-size="26" font-weight="700">Materialización</text>
+    <text x="1080.1" y="627.0" text-anchor="start" fill="#57555f" font-size="21" font-weight="600">Frontend / Producto</text>
+  </g>
+  <g opacity="1">
+    <circle cx="800" cy="708" r="57" fill="#854d0e" opacity=".20" filter="url(#soft)"/>
+    <circle cx="800" cy="708" r="44" fill="#ffffff" stroke="#854d0e" stroke-width="3.6"/>
+    <text x="800" y="722.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#854d0e">特</text>
+    <text x="800.0" y="806.0" text-anchor="middle" fill="#17161d" font-size="26" font-weight="700">Especialización</text>
+    <text x="800.0" y="834.0" text-anchor="middle" fill="#57555f" font-size="21" font-weight="600">Especialistas puros</text>
+  </g>
+  <g opacity="1">
+    <circle cx="593.8859538993036" cy="589" r="57" fill="#0369a1" opacity=".20" filter="url(#soft)"/>
+    <circle cx="593.8859538993036" cy="589" r="44" fill="#ffffff" stroke="#0369a1" stroke-width="3.6"/>
+    <text x="593.8859538993036" y="603.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#0369a1">操</text>
+    <text x="519.9" y="599.0" text-anchor="end" fill="#17161d" font-size="26" font-weight="700">Manipulación</text>
+    <text x="519.9" y="627.0" text-anchor="end" fill="#57555f" font-size="21" font-weight="600">Management / PM</text>
+  </g>
+  <g opacity="1">
+    <circle cx="593.8859538993036" cy="351" r="57" fill="#c2410c" opacity=".20" filter="url(#soft)"/>
+    <circle cx="593.8859538993036" cy="351" r="44" fill="#ffffff" stroke="#c2410c" stroke-width="3.6"/>
+    <text x="593.8859538993036" y="365.96" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="46" font-weight="600" fill="#c2410c">放</text>
+    <text x="519.9" y="341.0" text-anchor="end" fill="#17161d" font-size="26" font-weight="700">Emisión</text>
+    <text x="519.9" y="369.0" text-anchor="end" fill="#57555f" font-size="21" font-weight="600">Infraestructura / SRE / Plataforma</text>
+  </g>
+</svg>
