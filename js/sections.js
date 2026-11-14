@@ -189,9 +189,11 @@ export function renderIntro() {
     <h2 class="intro__title">${escHtml(INTRO.title)}</h2>
     <p class="intro__lead">${escHtml(INTRO.lead)}</p>
     <p class="intro__punch">${escHtml(INTRO.punch)}</p>
-    <ol class="intro__how">${INTRO.how.map((s) => `<li>${escHtml(s)}</li>`).join('')}</ol>
+    <ol class="intro__how">${INTRO.how.map((s) => `<li>${typeof s === 'string'
+      ? escHtml(s)
+      : `<span class="for-fine">${escHtml(s.fine)}</span><span class="for-coarse">${escHtml(s.coarse)}</span>`}</li>`).join('')}</ol>
     <div class="intro__actions">${actions}</div>
-    <p class="intro__dismiss">Click anywhere to close.${onModelPage
+    <p class="intro__dismiss"><span class="for-fine">Click</span><span class="for-coarse">Tap</span> anywhere to close.${onModelPage
       ? ' It is on the <a href="about.html">about page</a> if you want it again.'
       : ''}</p>`;
 }
@@ -258,7 +260,7 @@ export function renderAbout() {
     <section class="section" aria-labelledby="use-title">
       <div class="section__titles">
         <h2 class="section__title" id="use-title">How to use it</h2>
-        <p class="section__lead">The left column is what it was built for. The right column is what turns it into a weapon.</p>
+        <p class="section__lead">What it was built for, and what turns it into a weapon.</p>
       </div>
       <div class="use-guide">
         <div class="use-guide__col use-guide__col--do">

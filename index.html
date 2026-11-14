@@ -12,7 +12,7 @@
   <title>Affinity | What to expect from an engineer</title>
   <meta name="description" content="A Hunter x Hunter Nen model for tech work: what to expect when someone works outside their corner, and why AI raises their output without raising their judgment">
   <meta property="og:title" content="Affinity | What to expect from an engineer">
-  <meta property="og:description" content="Two layers: the corner your judgment came from, and the corner your job is in. The gap tells you what to expect.">
+  <meta property="og:description" content="The corner your judgment came from, and the corner your job is in: the gap between them tells you what to expect.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://affinity.neorgon.com/">
   <meta property="og:site_name" content="Neorgon">
@@ -74,12 +74,7 @@
       <section class="console-head" aria-labelledby="hex-title">
         <div class="console-head__titles">
           <h2 class="console-head__title" id="hex-title">The affinity hexagon</h2>
-          <p class="console-head__lead">
-            Click a corner to set your <strong>affinity</strong>, the corner your judgment came from.
-            Shift-click another to set the <strong>work</strong> you are doing now. The panel beside
-            the chart reads the gap between them.
-            <a class="console-head__src" href="about.html#origin">Where the numbers came from</a>
-          </p>
+          <a class="console-head__src" href="about.html#origin">Where the numbers came from</a>
         </div>
         <div class="console-head__actions">
           <button type="button" class="btn btn--secondary btn--sm" data-open-intro>What is this?</button>
@@ -92,7 +87,8 @@
 
       <div class="hex-wrap">
         <div class="hex-panel">
-          <div class="hex-stage" id="hexStage" role="group" aria-label="Affinity hexagon"></div>
+          <div class="hex-stage" id="hexStage" role="group" aria-label="Affinity hexagon" aria-describedby="hexHelp"></div>
+          <p class="visually-hidden" id="hexHelp">Choosing a corner sets your affinity. Shift-click a corner, or use the Work I'm doing menu, to set the work.</p>
         </div>
         <div class="hex-readout" id="hexReadout" aria-live="polite"></div>
       </div>
@@ -144,10 +140,10 @@
   </div>
 
   <footer class="neo-footer" data-footer-mode="minimal">
-    One person&rsquo;s argument about how career effort converts &mdash; not measured, not predictive. Runs entirely in your browser and stores nothing.
+    One person&rsquo;s argument about how career effort converts: not measured, not predictive. Runs entirely in your browser and stores nothing.
     <template data-neo-disclaimer data-label="Full disclaimer" data-title="What this model is, and what it is not">
       <p>Nothing here is measured, validated, or predictive, and the percentages are illustrative. The whole thing is one person&rsquo;s argument about how career effort converts, borrowed from a manga power system.</p>
-      <p><strong>Use it on yourself.</strong> Do not use it to type a colleague, screen a candidate, staff a project, or decide who gets promoted &mdash; and do not use it to talk yourself out of a switch you want.</p>
+      <p><strong>Use it on yourself.</strong> Do not use it to type a colleague, screen a candidate, staff a project, or decide who gets promoted, and do not use it to talk yourself out of a switch you want.</p>
       <p>Hunter x Hunter and Nen are the work of Yoshihiro Togashi, published by Shueisha. This site is unaffiliated commentary and reproduces no art or text from the series.</p>
       <p>Everything runs in your browser. Nothing you enter is stored or sent anywhere.</p>
     </template>

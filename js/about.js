@@ -8,10 +8,18 @@ export const INTRO = {
   title: 'Know the affinity, know what to expect.',
   lead: 'Six kinds of engineering work sit on a hexagon. You run at full rate in your own corner and shed about 20% for every step away from it. The number is not a verdict on anyone. It is a forecast: what lands, what gets missed, and how much review to budget.',
   punch: 'AI does not turn someone who was not proficient into a machine. At best it sharpens the corner they already have, and puts the next corner over within reach.',
+  // The how-to lives here, in the "What is this?" sheet, not above the chart.
+  // `coarse` is the wording a touch screen shows: there is no Shift to hold.
   how: [
-    'Click a corner to set your affinity, the corner your judgment came from.',
-    'Shift-click a second corner to set the work you are currently doing.',
-    'The panel beside the chart reads the gap between them.',
+    {
+      fine: 'Click a corner to set your affinity, the corner your judgment came from.',
+      coarse: 'Tap a corner to set your affinity, the corner your judgment came from.',
+    },
+    {
+      fine: 'Shift-click a second corner to set the work you are doing now.',
+      coarse: 'Set the work you are doing now from the Work I\'m doing menu.',
+    },
+    'The Expect panel reads the gap between them.',
   ],
 };
 
